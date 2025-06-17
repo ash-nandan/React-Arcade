@@ -21,7 +21,7 @@ function Scattergories() {
         </li>
       </ul>
       <h3>Your randomly chosen letter is P</h3>
-      <>
+      <div className="gameForm">
         <form>
           <label htmlFor="cat1">A boy&apos;s name </label>
           <input />
@@ -29,7 +29,7 @@ function Scattergories() {
           <input />
           <button>Submit</button>
         </form>
-      </>
+      </div>
     </div>
   )
 }

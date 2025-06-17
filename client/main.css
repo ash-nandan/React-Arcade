@@ -3,3 +3,9 @@ body {
   color: #0a1520;
   font-family: 'Poppins', sans-serif;
 }
+
+.gameForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
