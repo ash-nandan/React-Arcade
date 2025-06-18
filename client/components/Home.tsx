@@ -1,8 +1,17 @@
-function Home() {
+import React from 'react'
+import NavBar from './Navbar'
+import Cards from './Cards'
+import '../main.css'
+
+const Home: React.FC = () => {
   return (
-    <div>
-      <h2>Home</h2>
-      <p>React development has begun!</p>
+    <div className="#">
+      <h2 className="#">React Arcade</h2>
+      <p className="#">Tiny games, Big Fun!</p>
+      <NavBar />
+      <Cards title="Game 1" description="This is a game" />
+      <Cards title="Game 2" description="This is a game" />
+      <Cards title="Game 3" description="This is a game" />
     </div>
   )
 }

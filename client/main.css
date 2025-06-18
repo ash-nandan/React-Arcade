@@ -1,5 +1,173 @@
 body {
-  background-color: #faf8f1;
+  background-image: url(/assets/7392521.jpg);
+  background-size: cover;
   color: #0a1520;
   font-family: 'Poppins', sans-serif;
+}
+
+button {
+  margin-left: 5px;
+  cursor: pointer;
+  height: 100px;
+  width: 150px;
+}
+
+/* nav bar styling */
+.navbar {
+  background-color: #333333;
+  padding: 1rem 0;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.navbar-logo {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu li {
+  margin-left: 2rem;
+}
+
+.navbar-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-menu a:hover {
+  color: #00aaff;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .navbar-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    flex-direction: column;
+    padding: 1rem 0;
+  }
+
+  .navbar-menu.active {
+    display: flex;
+  }
+
+  .navbar-menu li {
+    margin: 1rem 0;
+    text-align: center;
+  }
+
+  .navbar-menu a {
+    font-size: 1.2rem;
+  }
+}
+
+/*cards styling*/
+.card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  max-width: 300px;
+  margin: 1rem auto;
+  text-align: center;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.card-description {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.card-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.card-button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
+}
+
+.card-button.primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.card-button.primary:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.card-button.secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+.card-button.secondary:hover {
+  background-color: #5a6268;
+  transform: scale(1.05);
 }
