@@ -14,3 +14,7 @@ body {
   flex-direction: row;
   margin: 1%;
 }
+
+.results {
+  margin: 5%;
+}

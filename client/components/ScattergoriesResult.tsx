@@ -12,6 +12,12 @@ function Results() {
             Any matching answers with other players do NOT receive a point
           </li>
         </ul>
+        <div>
+          <h3>Dynamic Category</h3>
+          <p>You: Dynamic Answer</p>
+          <p>Player 2: Dynamic Answer</p>
+          <p>Player 3: Dynamic Answer</p>
+        </div>
       </div>
     </>
   )
