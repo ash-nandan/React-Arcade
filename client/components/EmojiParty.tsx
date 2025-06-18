@@ -1,13 +1,53 @@
 import Emoji from './Emoji'
+import { useEffect, useState } from 'react'
 
 function EmojiParty() {
-  const gridArray = new Array(9).fill(0) //3x3 grid
+  const gridSize = 9
+  const [emojiGrid, setEmojiGrid] = useState<string[]>(() =>
+    Array.from({ length: gridSize }, () => getRandomEmoji()),
+  )
+  const [timeLeft, setTimeLeft] = useState(30)
+  const [hasFailed, setHasFailed] = useState(false)
+  const [hasWon, setHasWon] = useState(false)
+
+  function getRandomEmoji() {
+    const emojiList = ['😎', '🤥', '🤩', '😜']
+    const randomIndex = Math.floor(Math.random() * emojiList.length)
+    return emojiList[randomIndex]
+  }
+
+  useEffect(() => {
+    if (timeLeft <= 0 && !hasWon) {
+      setHasFailed(true)
+      return
+    }
+    const timer = setInterval(() => {
+      setTimeLeft((prev) => prev - 1)
+    }, 1000)
+
+    return () => clearInterval(timer)
+  }, [timeLeft, hasWon])
+
+  //check if all emojis match
+  useEffect(() => {
+    if (emojiGrid.every((e) => e === emojiGrid[0])) {
+      setHasWon(true)
+    }
+  }, [emojiGrid])
 
   return (
     <>
-      <h2 style={{ color: 'white', textAlign: 'center' }}>
-        🎨Tiny Games, Big Fun!!
-      </h2>
+      <h1
+        style={{ color: 'black', textAlign: 'right', marginBottom: '0.5rem' }}
+      >
+        ⏱ Time Left: {timeLeft}s
+      </h1>
+      {hasWon && (
+        <h2 style={{ color: 'green', textAlign: 'center' }}>YOU WIN!!🎉</h2>
+      )}
+
+      {hasFailed && !hasWon && <h2> </h2>}
+
       <section
         style={{
           display: 'grid',
@@ -18,8 +58,19 @@ function EmojiParty() {
           marginInline: 'auto',
         }}
       >
-        {gridArray.map((_, i) => (
-          <Emoji key={i} />
+        {emojiGrid.map((emoji, i) => (
+          <Emoji
+            key={i}
+            emoji={hasFailed ? '☠' : emoji}
+            onClick={() => {
+              setEmojiGrid((prev) => {
+                const copy = [...prev]
+                copy[i] = getRandomEmoji()
+                return copy
+              })
+            }}
+            disabled={hasFailed || hasWon}
+          />
         ))}
       </section>
     </>

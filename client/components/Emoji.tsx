@@ -1,47 +1,16 @@
-import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
-const emojiList = [
-  '😎',
-  '🤥',
-  '🤓',
-  '🤩',
-  '😜',
-  '🤣',
-  '😇',
-  '🤠',
-  '🥱',
-  '🤯',
-  '😱',
-  '🥰',
-  '😒',
-  '😭',
-  '🤬',
-  '🥶',
-  '😴',
-  '🤒',
-  '☠',
-  '🥳',
-]
+type EmojiProps = {
+  emoji: string
+  onClick: () => void
+  disabled: boolean
+}
 
-function Emoji() {
-  const [emoji, setEmoji] = useState(getRandomEmoji())
-  const [emojiKey, setEmojiKey] = useState(0)
-
-  function getRandomEmoji() {
-    const randomIndex = Math.floor(Math.random() * emojiList.length)
-    return emojiList[randomIndex]
-  }
-
-  const handleClick = () => {
-    setEmoji(getRandomEmoji())
-    setEmojiKey((prev) => prev + 1)
-  }
-
+function Emoji({ emoji, onClick, disabled }: EmojiProps) {
   return (
     <button
-      className="emojis"
-      onClick={handleClick}
+      onClick={onClick}
+      disabled={disabled}
       style={{
         backgroundColor: 'transparent',
         border: 'none',
@@ -61,11 +30,11 @@ function Emoji() {
     >
       <AnimatePresence mode="wait">
         <motion.span
-          key={emojiKey}
+          key={emoji}
           initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
+          animate={{ scale: 1.5 }}
           exit={{ scale: 0, opacity: 0 }}
-          transition={{ type: 'spring' as const, stiffness: 300, damping: 15 }}
+          transition={{ type: 'spring' as const, stiffness: 400, damping: 30 }}
         >
           {emoji}
         </motion.span>
