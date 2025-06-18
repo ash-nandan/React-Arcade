@@ -1,3 +1,7 @@
+import { useState } from 'react'
+import sgLists from '../../data/sgLists'
+import sgPlayerAnswers from '../../data/sgPlayerAnswers'
+
 function Results() {
   return (
     <>
