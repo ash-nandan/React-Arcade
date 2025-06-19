@@ -1,0 +1,9 @@
+body {
+  background-image: url('https://img.freepik.com/premium-photo/pixel-art-game-backgrounds-game-background_670382-252714.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
