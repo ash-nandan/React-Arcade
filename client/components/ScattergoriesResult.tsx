@@ -22,7 +22,9 @@ export default function Results() {
         {Object.entries(sgLists[0]).map(([cat, value]) => (
           <div key={cat}>
             <h3>{value}</h3>
-            <p>Your Answer: {playerOne[cat]}</p>
+            <p>
+              <strong>Your Answer: {playerOne[cat]}</strong>
+            </p>
             <p>Player 2: {playerTwo[cat]}</p>
             <p>Player 3: {playerThree[cat]}</p>
           </div>
