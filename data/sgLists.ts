@@ -1,4 +1,4 @@
-export default [
+const sgLists: Array<Record<string, string>> = [
   {
     cat1: '1.Clothing',
     cat2: '2.Gifts',
@@ -12,3 +12,7 @@ export default [
     cat10: '10.Musical Instruments',
   },
 ]
+
+export default sgLists
+
+//new learning:
