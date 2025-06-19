@@ -1,4 +1,4 @@
-export default [
+const playerAnswers: Array<Record<string, string>> = [
   {
     cat1: 'Peter',
     cat2: 'Purse',
@@ -24,3 +24,5 @@ export default [
     cat10: 'Piano',
   },
 ]
+
+export default playerAnswers
