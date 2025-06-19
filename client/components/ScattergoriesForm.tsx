@@ -21,8 +21,9 @@ export default function GameForm() {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
     console.log('Submitting:', answer)
-    navigate('/scattergories/results')
+    navigate('/scattergories/results', { state: answer })
     //new learning: useNavigate is used for navigation inside the code (like in a function) after something has happened, like a form submit we have here. It's placed in the component logic rather than in the return like a <Link />
+    //new learning: { state: answer } is a navigation state that lets you send extra information along with the URL your navigating to, like an extra data package. We use in conjuction with react's useLocation function
   }
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
