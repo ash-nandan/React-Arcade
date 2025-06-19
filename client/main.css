@@ -14,3 +14,9 @@ body {
   flex-direction: row;
   margin: 1%;
 }
+
+.resultContainer {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+}

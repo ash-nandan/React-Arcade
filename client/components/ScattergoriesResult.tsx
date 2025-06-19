@@ -18,14 +18,16 @@ export default function Results() {
         <li>Remember, you receive a point for every unique answer you have</li>
         <li>Any matching answers with other players do NOT receive a point</li>
       </ul>
-      {Object.entries(sgLists[0]).map(([cat, value]) => (
-        <div key={cat}>
-          <h3>{value}</h3>
-          <p>Your Answer: {playerOne[cat]}</p>
-          <p>Player 2: {playerTwo[cat]}</p>
-          <p>Player 3: {playerThree[cat]}</p>
-        </div>
-      ))}
+      <div className="resultContainer">
+        {Object.entries(sgLists[0]).map(([cat, value]) => (
+          <div key={cat}>
+            <h3>{value}</h3>
+            <p>Your Answer: {playerOne[cat]}</p>
+            <p>Player 2: {playerTwo[cat]}</p>
+            <p>Player 3: {playerThree[cat]}</p>
+          </div>
+        ))}
+      </div>
     </div>
   )
 }
