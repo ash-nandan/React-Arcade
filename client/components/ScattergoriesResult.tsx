@@ -12,13 +12,13 @@ export default function Results() {
 
   return (
     <div>
-      <h2>The Results Are In!</h2>
-      <ul>
+      <div className="gameForm info">
+        <h2>The Results Are In!</h2>
         <li>Check your answers against other players</li>
         <li>Remember, you receive a point for every unique answer you have</li>
         <li>Any matching answers with other players do NOT receive a point</li>
-      </ul>
-      <div className="resultContainer">
+      </div>
+      <div className="gameForm resultContainer">
         {Object.entries(sgLists[0]).map(([cat, value]) => (
           <div key={cat}>
             <h3>{value}</h3>

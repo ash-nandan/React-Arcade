@@ -5,7 +5,7 @@ function Scattergories() {
     <>
       <div>
         <h1 className="title">Scattergories</h1>
-        <div className="gameForm instructions">
+        <div className="gameForm info">
           <h3>
             Give an answer for each item below that starts with your chosen
             letter...BUT, be creative. You receive one point for every unique
