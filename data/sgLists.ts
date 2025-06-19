@@ -15,4 +15,4 @@ const sgLists: Array<Record<string, string>> = [
 
 export default sgLists
 
-//new learning:
+//new learning: Record<string, string> is a way of typescripting an object type with a key type and value type inside. It's like saying create an object type where every key is a string and every value is a string. Using the Array<> wrapped around this lets you reference an array type whose values inside are objects
