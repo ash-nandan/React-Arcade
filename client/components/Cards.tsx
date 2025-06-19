@@ -6,6 +6,8 @@ interface CardProps {
   description: string
 }
 
+// this will contain the links for our mini games
+
 const Card: React.FC<CardProps> = ({ title, description }) => {
   return (
     <div className="card">
