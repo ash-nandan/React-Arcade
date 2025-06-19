@@ -4,19 +4,16 @@ function Scattergories() {
   return (
     <>
       <div>
-        <h2>Scattergories</h2>
-        <ul>
-          <li>
-            Give an answer that starts with your chosen letter for each category
-          </li>
-          <li>Submit to check against your competitors</li>
-          <li>You receive a point for every unique answer you have</li>
-          <li>
-            Any answers that match another competitors answers do not receive a
-            point
-          </li>
-          <li>Tip: think creatively</li>
-        </ul>
+        <h1 className="title">Scattergories</h1>
+        <div className="gameForm instructions">
+          <h3>
+            Give an answer for each item below that starts with your chosen
+            letter...BUT, be creative. You receive one point for every unique
+            answer that doesn&apos;t match the other players. Submit your
+            answers once you&apos;re done and see how you went against your
+            opponents.
+          </h3>
+        </div>
       </div>
       <>
         <GameForm />

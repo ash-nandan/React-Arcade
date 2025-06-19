@@ -38,9 +38,9 @@ export default function GameForm() {
 
   return (
     <div>
-      <h3>Your chosen letter is P</h3>
-      <div className="gameForm">
-        <form onSubmit={handleSubmit}>
+      <h2 className="gameForm letter">Your chosen letter is P</h2>
+      <div>
+        <form className="gameForm" onSubmit={handleSubmit}>
           {Object.entries(sgLists[0]).map(([cat, value]) => (
             //new learning: had to index 0 as sgLists is an array of objects. I made it an array to try and design with extensibility in mind. Would need to refactor if other list objects were added to the array and wanted to choose one randomly for example
             <div key={cat} className="singleForm">
@@ -55,7 +55,7 @@ export default function GameForm() {
             </div>
           ))}
 
-          <button>Submit</button>
+          <button className="submitButton">Submit</button>
         </form>
       </div>
     </div>

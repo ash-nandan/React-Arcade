@@ -1,4 +1,4 @@
-import EmojiParty from './EmojiParty'
+import { Outlet } from 'react-router'
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
       <h2 style={{ color: 'black', textAlign: 'center' }}>
         Pick an emoji, any emoji and match them all!
       </h2>
-      <EmojiParty />
+      <Outlet />
     </div>
   )
 }
