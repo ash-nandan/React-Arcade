@@ -3,10 +3,12 @@ import { useEffect, useState } from 'react'
 
 function EmojiParty() {
   const gridSize = 9
-  const [emojiGrid, setEmojiGrid] = useState<string[]>(() =>
-    Array.from({ length: gridSize }, () => getRandomEmoji()),
-  )
-  const [timeLeft, setTimeLeft] = useState(30)
+
+  const generateGrid = () =>
+    Array.from({ length: gridSize }, () => getRandomEmoji())
+
+  const [emojiGrid, setEmojiGrid] = useState<string[]>(generateGrid)
+  const [timeLeft, setTimeLeft] = useState(25)
   const [hasFailed, setHasFailed] = useState(false)
   const [hasWon, setHasWon] = useState(false)
 
@@ -35,6 +37,20 @@ function EmojiParty() {
     }
   }, [emojiGrid])
 
+  const handleEmojiClick = (index: number) => {
+    if (hasFailed || hasWon) return
+    const newGrid = [...emojiGrid]
+    newGrid[index] = getRandomEmoji()
+    setEmojiGrid(newGrid)
+  }
+
+  const restartGame = () => {
+    setEmojiGrid(generateGrid())
+    setTimeLeft(25)
+    setHasFailed(false)
+    setHasWon(false)
+  }
+
   return (
     <>
       <h1
@@ -46,7 +62,24 @@ function EmojiParty() {
         <h2 style={{ color: 'green', textAlign: 'center' }}>YOU WIN!!🎉</h2>
       )}
 
-      {hasFailed && !hasWon && <h2> </h2>}
+      {(hasFailed || hasWon) && (
+        <div style={{ textAlign: 'right' }}>
+          <button
+            onClick={restartGame}
+            style={{
+              fontSize: '1.2rem',
+              padding: '0.5rem, 1.5rem',
+              backgroundColor: 'gray',
+              border: 'none',
+              borderRadius: '10px',
+              cursor: 'pointer',
+              fontWeight: 'bold',
+            }}
+          >
+            Restart Game
+          </button>
+        </div>
+      )}
 
       <section
         style={{
@@ -62,13 +95,7 @@ function EmojiParty() {
           <Emoji
             key={i}
             emoji={hasFailed ? '☠' : emoji}
-            onClick={() => {
-              setEmojiGrid((prev) => {
-                const copy = [...prev]
-                copy[i] = getRandomEmoji()
-                return copy
-              })
-            }}
+            onClick={() => handleEmojiClick(i)}
             disabled={hasFailed || hasWon}
           />
         ))}
