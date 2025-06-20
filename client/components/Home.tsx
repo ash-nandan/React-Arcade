@@ -6,12 +6,12 @@ import '../main.css'
 const Home: React.FC = () => {
   return (
     <div>
-      <h2 className="home-title">React Arcade</h2>
-      <p className="home-tagline">Tiny games, Big Fun!</p>
       <NavBar />
-      <Cards title="Game 1" description="This is a game" />
-      <Cards title="Game 2" description="This is a game" />
-      <Cards title="Game 3" description="This is a game" />
+      <div style={{ marginTop: '4rem' }}>
+        <Cards title="Scattergories" description="This is a game" />
+        <Cards title="Emoji Party" description="This is a game" />
+        <Cards title="Emoji Movie" description="This is a game" />
+      </div>
     </div>
   )
 }
