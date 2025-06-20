@@ -11,7 +11,7 @@ import Emoji from './components/EmojiParty'
 const routes = createRoutesFromElements(
   <Route path="/" element={<App />}>
     <Route index element={<Home />} />
-    <Route path="test" element={<Emoji />} />
+    <Route path="emojiparty" element={<Emoji />} />
   </Route>,
 )
 
