@@ -6,12 +6,12 @@ import {
 
 import App from './components/App'
 import Home from './components/Home'
-import Emoji from './components/Emoji'
+import Emoji from './components/EmojiParty'
 
 const routes = createRoutesFromElements(
   <Route path="/" element={<App />}>
     <Route index element={<Home />} />
-    <Route path="emojiparty" element={<Emoji />} />
+    <Route path="test" element={<Emoji />} />
   </Route>,
 )
 
