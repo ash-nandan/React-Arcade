@@ -16,7 +16,7 @@ function App() {
       }}
     >
       <header className="header">REACT ARCADE</header>
-      <h2 className="header subHeader">
+      <h2 style={{ color: 'black', textAlign: 'center' }}>
         Pick an emoji, any emoji and match them all!!
       </h2>
       <Outlet />
