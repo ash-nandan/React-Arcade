@@ -12,8 +12,8 @@ const playerAnswers: Array<Record<string, string>> = [
     cat10: 'Piano',
   },
   {
-    cat1: 'Patrick',
-    cat2: 'Present',
+    cat1: 'Polo',
+    cat2: 'Pants',
     cat3: 'Panda',
     cat4: 'Pool',
     cat5: 'Pink',

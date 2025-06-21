@@ -17,20 +17,8 @@ function App() {
         paddingTop: '5rem',
       }}
     >
-      <header className="header">REACT ARCADE</header>
-
       <h2 className="header subHeader">Tiny games. Big Fun</h2>
       <NavBar />
-      <header className="header" style={{ marginTop: '2rem' }}>
-        REACT ARCADE
-      </header>
-      <h2 className="header subHeader">Tiny games, Big Fun!</h2>
-      <Outlet />
-
-      <h2 style={{ color: 'black', textAlign: 'center' }}>
-        Pick an emoji, any emoji and match them all!!
-      </h2>
-      <EmojiParty />
       <Outlet />
     </div>
   )
