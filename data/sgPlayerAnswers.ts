@@ -1,0 +1,28 @@
+const playerAnswers: Array<Record<string, string>> = [
+  {
+    cat1: 'Peter',
+    cat2: 'Purse',
+    cat3: 'Panda',
+    cat4: 'Popsicle',
+    cat5: 'Purple',
+    cat6: 'Pancakes',
+    cat7: 'Palm tree',
+    cat8: 'Poltergeist',
+    cat9: 'Philipines',
+    cat10: 'Piano',
+  },
+  {
+    cat1: 'Patrick',
+    cat2: 'Present',
+    cat3: 'Panda',
+    cat4: 'Pool',
+    cat5: 'Pink',
+    cat6: 'Peanut Butter',
+    cat7: 'Parasol',
+    cat8: 'Parasite',
+    cat9: 'Poland',
+    cat10: 'Piano',
+  },
+]
+
+export default playerAnswers
