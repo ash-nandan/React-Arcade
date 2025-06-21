@@ -1,7 +1,10 @@
 import { Outlet } from 'react-router'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import EmojiParty from './EmojiParty'
+>>>>>>> emoji-grid
+=======
 >>>>>>> emoji-grid
 
 function App() {
@@ -27,7 +30,10 @@ function App() {
         Pick an emoji, any emoji and match them all!!
       </h2>
       <Outlet />
+<<<<<<< HEAD
       <EmojiParty />
+>>>>>>> emoji-grid
+=======
 >>>>>>> emoji-grid
     </div>
   )
