@@ -10,7 +10,7 @@ const Home: React.FC = () => {
       <div style={{ marginTop: '4rem' }}>
         <Cards
           title="Scattergories"
-          description="Categories, one letter, limited time. How many can you name?"
+          description="Categories, one letter. How many can you name?"
           PlayLink="/scattergories"
         />
         <Cards

@@ -129,7 +129,7 @@ const EmojiMovie: React.FC = () => {
   return (
     <div className="game-container" role="main">
       <header>
-        <h1 className="title">Guess the Movie</h1>
+        <h1 className="header">Guess the Movie</h1>
         <p className="score" role="status">
           Score: {gameState.score} | Progress: {progress}
         </p>

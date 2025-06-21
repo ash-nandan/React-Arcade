@@ -53,6 +53,10 @@ function EmojiParty() {
 
   return (
     <>
+      <h1 className="header">Emoji Party</h1>
+      <h2 className="gameForm info">
+        Pick an emoji, any emoji and match them all!!
+      </h2>
       <h1
         style={{ color: 'black', textAlign: 'right', marginBottom: '0.5rem' }}
       >

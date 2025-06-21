@@ -4,7 +4,7 @@ function Scattergories() {
   return (
     <>
       <div>
-        <h1 className="title">Scattergories</h1>
+        <h1 className="header">Scattergories</h1>
         <div className="gameForm info">
           <h3>
             Give an answer for each item below that starts with your chosen
