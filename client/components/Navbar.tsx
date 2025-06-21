@@ -22,6 +22,9 @@ const NavBar: React.FC = () => {
           <li>
             <Link to="/emojimovie">Emoji Movie</Link>
           </li>
+          <li>
+            <Link to="/review">Review</Link>
+          </li>
         </ul>
       </div>
     </nav>

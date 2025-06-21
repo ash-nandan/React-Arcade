@@ -26,12 +26,6 @@ function App() {
       </header>
       <h2 className="header subHeader">Tiny games, Big Fun!</h2>
       <Outlet />
-
-      <h2 style={{ color: 'black', textAlign: 'center' }}>
-        Pick an emoji, any emoji and match them all!!
-      </h2>
-      <EmojiParty />
-      <Outlet />
     </div>
   )
 }

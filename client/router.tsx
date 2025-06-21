@@ -10,6 +10,7 @@ import Scattergories from './components/Scattergories'
 import Results from './components/ScattergoriesResult'
 import EmojiParty from './components/EmojiParty'
 import EmojiMovie from './components/EmojiMovie'
+import Review from './components/Review'
 
 const routes = createRoutesFromElements(
   <Route path="/" element={<App />}>
@@ -18,6 +19,7 @@ const routes = createRoutesFromElements(
     <Route path="scattergories/results" element={<Results />} />
     <Route path="emojiparty" element={<EmojiParty />} />
     <Route path="emojimovie" element={<EmojiMovie />} />
+    <Route path="review" element={<Review />} />
   </Route>,
 )
 
