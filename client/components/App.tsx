@@ -1,8 +1,6 @@
 import { Outlet } from 'react-router'
 import NavBar from './Navbar'
 
-import EmojiParty from './EmojiParty'
-
 function App() {
   return (
     <div
