@@ -14,10 +14,10 @@ const NavBar: React.FC = () => {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <span>Scattergories</span>
+            <Link to="/scattergories">Scattergories</Link>
           </li>
           <li>
-            <span>Emoji Party</span>
+            <Link to="/emojiparty">Emoji Party</Link>
           </li>
           <li>
             <Link to="/emojimovie">Emoji Movie</Link>
