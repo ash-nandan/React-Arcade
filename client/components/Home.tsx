@@ -9,9 +9,21 @@ const Home: React.FC = () => {
       <h2 className="home-title">React Arcade</h2>
       <p className="home-tagline">Tiny games, Big Fun!</p>
       <NavBar />
-      <Cards title="Game 1" description="This is a game" />
-      <Cards title="Game 2" description="This is a game" />
-      <Cards title="Game 3" description="This is a game" />
+      <Cards
+        title="Scattergories"
+        description="Categories, one letter, limited time. How many can you name?"
+        PlayLink="/Scattergories"
+      />
+      <Cards
+        title="Emoji Party"
+        description="Match all the emoji's before the time runs out!"
+        PlayLink="/emojiparty"
+      />
+      <Cards
+        title="Emoji Movie"
+        description="Can you guess the movie?"
+        PlayLink="/"
+      />
     </div>
   )
 }
