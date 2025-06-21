@@ -1,4 +1,5 @@
 import { Outlet } from 'react-router'
+import NavBar from './Navbar'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         paddingTop: '5rem',
       }}
     >
+      <NavBar />
       <header className="header" style={{ marginTop: '2rem' }}>
         REACT ARCADE
       </header>
