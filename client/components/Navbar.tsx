@@ -1,32 +1,26 @@
-import React, { useState } from 'react'
+import React from 'react'
+import { Link } from 'react-router-dom'
 import '../main.css'
 
 const NavBar: React.FC = () => {
-  const [isOpen, setIsOpen] = useState<boolean>(false)
-
-  // still trying to figure out the hamburger style responsiveness
-
-  const toggleMenu = (): void => {
-    setIsOpen(!isOpen)
-  }
-
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        <div className="navbar-logo">React Arcade</div>
-
-        <ul className={`navbar-menu ${isOpen ? 'active' : ''}`}>
+        <Link to="/" className="navbar-logo">
+          React Arcade
+        </Link>
+        <ul className="navbar-menu">
           <li>
-            <a href="#home">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <a href="#about">Games</a>
+            <Link to="/scattergories">Scattergories</Link>
           </li>
           <li>
-            <a href="#about">Games</a>
+            <Link to="/emojiparty">Emoji Party</Link>
           </li>
           <li>
-            <a href="#contact">Contact</a>
+            <Link to="/emojimovie">Emoji Movie</Link>
           </li>
         </ul>
       </div>
