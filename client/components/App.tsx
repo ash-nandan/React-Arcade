@@ -1,11 +1,6 @@
 import { Outlet } from 'react-router'
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
 import EmojiParty from './EmojiParty'
->>>>>>> emoji-grid
-=======
->>>>>>> emoji-grid
 
 function App() {
   return (
@@ -22,19 +17,16 @@ function App() {
       }}
     >
       <header className="header">REACT ARCADE</header>
-<<<<<<< HEAD
+
       <h2 className="header subHeader">Tiny games. Big Fun</h2>
       <Outlet />
-=======
+
       <h2 style={{ color: 'black', textAlign: 'center' }}>
         Pick an emoji, any emoji and match them all!!
       </h2>
       <Outlet />
-<<<<<<< HEAD
+
       <EmojiParty />
->>>>>>> emoji-grid
-=======
->>>>>>> emoji-grid
     </div>
   )
 }
